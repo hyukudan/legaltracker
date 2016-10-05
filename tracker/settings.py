@@ -13,13 +13,22 @@ import os
 
 
 # settings.py
+
+
+
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+TEMPLATE_ROOT = os.path.join(BASE_DIR, "templates")
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 MEDIA_ROOT = os.path.join(
     os.path.dirname(BASE_DIR), "deployment", "media")
 
+
+
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
+
+
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '5(6z-(-r7xh@0j#^xp+b92xase*vdgei=#(zz_z11v0_5pdula'
@@ -33,10 +42,15 @@ ALLOWED_HOSTS = []
 
 # Adding dirs
 
+TEMPLATE_DIRS = (
+    TEMPLATE_ROOT,
+)
+
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [TEMPLATE_ROOT,'templates',],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
