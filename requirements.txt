@@ -1,0 +1,6 @@
+Django==1.10.2
+argparse==1.2.1
+django-bootstrap3==7.1.0
+requests==2.11.1
+whitenoise==3.2.2
+wsgiref==0.1.2
